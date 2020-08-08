@@ -8,13 +8,6 @@ def resume(request):
 
     # *  All Profile objects
     profile = Profile.objects.get(full_name='Dmytro Tkach')
-    print(profile.profile_img.url)
-    print(profile.project_set.all().first())
-    print(profile.project_set.all()[0])
-    print(profile.project_set.all().get(title='Todo - App'))
-    print(profile.about_set.all().filter(hidden=False))
-    print(profile.about_set.all().filter(hidden=True))
-    print(profile.achievement_set.all().first().slug)
 
     # * Profile skills
     skills = []

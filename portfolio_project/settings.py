@@ -20,13 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ek2b!_u^37t5g86y*22ypsi4t-v%+bifwrrt&tv(n!3we79k3$'
+SECRET_KEY = 'ek2b!_u^37bdasf67g43ubdhqqy654fge68q4wefoiqhdoiqfqgwqrrt&tv(n!3we79k3$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-# '192.168.1.3', 'localhost', '127.0.0.1',
+ALLOWED_HOSTS = ['*'] 
 
 # Application definition
 
@@ -125,3 +124,11 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# email config for gmail:
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = '' # <--------------------------------------------------------insert your email here
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = '' # <----------------------------------------------------insert your gmail password or the password for this app from gmail
